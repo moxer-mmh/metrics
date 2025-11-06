@@ -55,8 +55,8 @@ export default async function({list, login, data, computed, imports, graphql, qu
 
   //Manager
   {
-    const value = user.projects.totalCount
-    const unlock = user.projects.nodes?.shift()
+    const value = user.projects?.totalCount ?? 0
+    const unlock = user.projects?.nodes?.shift()
 
     list.push({
       title: "Manager",
